@@ -1,7 +1,0 @@
-#!/usr/bin/bash
-sh ~/.config/lemonbar/lemonconfig \
-    | lemonbar -p \
-    -f "Hack:size=10" \
-    -F "#FF000000" \
-    -B "#FFFFFFFF" \
-wait
