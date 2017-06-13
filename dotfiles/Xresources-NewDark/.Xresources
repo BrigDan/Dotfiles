@@ -1,0 +1,47 @@
+Xft.dpi: 96
+
+URxvt.letterSpace: -1
+URxvt.scrollBar: none
+URxvt.internalBorder: 6
+
+URxvt.font: xft:Hack:style=Regular:size=10.5
+URxvt.boldFont: xft:Hack:style=Bold:size=10.5
+
+! special
+urxvt.foreground:   #deded6
+urxvt.background:   #121417
+urxvt.cursorColor:  #deded6
+
+! black
+urxvt.color0:       #2b3135
+urxvt.color8:       #4c5356
+
+! red
+urxvt.color1:       #8fa1b3
+urxvt.color9:       #8fa1b3
+
+! green
+urxvt.color2:       #769070
+urxvt.color10:      #769070
+
+! yellow
+urxvt.color3:       #4f5b66
+urxvt.color11:      #4f5b66
+
+! blue
+urxvt.color4:       #607a86
+urxvt.color12:      #607a86
+
+! magenta
+urxvt.color5:       #80757e
+urxvt.color13:      #80757e
+
+! cyan
+urxvt.color6:       #60867f
+urxvt.color14:      #60867f
+
+! white
+urxvt.color7:       #deded6
+urxvt.color15:      #deded6
+
+

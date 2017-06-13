@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<item label="Terminal emulator">
+			<action name="Execute">
+				<execute>urxvt</execute>
+			</action>
+		</item>
+		<item label="Web browser">
+			<action name="Execute">
+				<execute>x-www-browser</execute>
+			</action>
+		</item>
+		<!-- This requires the presence of the 'menu' package to work -->
+		<separator/>
+		<menu id="root-menu-194350" label="Editors">
+			<item label="Spacemacs">
+				<action name="Execute">
+					<execute>emacs</execute>
+				</action>
+			</item>
+			<item label="BlueJ">
+				<action name="Execute">
+					<execute>bluej</execute>
+				</action>
+			</item>
+			<item label="Eclipse">
+				<action name="Execute">
+					<execute>eclipse</execute>
+				</action>
+			</item>
+			<item label="Leafpad">
+				<action name="Execute">
+					<execute>leafpad</execute>
+				</action>
+			</item>
+			<item label="Libreoffice">
+				<action name="Execute">
+					<execute>libreoffice</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-184229" label="Internet">
+			<item label="Telegram">
+				<action name="Execute">
+					<execute>/home/brig/Downloads/Telegram/Telegram</execute>
+				</action>
+			</item>
+			<item label="Riot">
+				<action name="Execute">
+					<execute>riot-web</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-534338" label="Graphics">
+			<item label="Gimp">
+				<action name="Execute">
+					<execute>gimp</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-94234" label="Sound">
+			<item label="Volume Control">
+				<action name="Execute">
+					<execute>pavucontrol</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-984848" label="Settings">
+			<item label="Bleachbit">
+				<action name="Execute">
+					<execute>bleachbit</execute>
+				</action>
+			</item>
+			<item label="Set Wallpaper">
+				<action name="Execute">
+					<execute>nitrogen</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<item label="obmenu">
+			<action name="Execute">
+				<execute>obmenu</execute>
+			</action>
+		</item>
+		<item label="obconf">
+			<action name="Execute">
+				<execute>obconf</execute>
+			</action>
+		</item>
+		<item label="tint2conf">
+			<action name="Execute">
+				<execute>tint2conf</execute>
+			</action>
+		</item>
+		<item label="Reconfigure">
+			<action name="Reconfigure"/>
+		</item>
+		<item label="Restart">
+			<action name="Restart"/>
+		</item>
+		<separator/>
+		<item label="Exit">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>
