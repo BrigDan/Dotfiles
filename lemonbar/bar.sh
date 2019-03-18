@@ -1,8 +1,11 @@
 #!/usr/bin/env dash
 # we don't need bash for this script, save performances by using dash / sh
 
-a='%{F#F7A5BB}'
-n='%{F-}'
+# Import the colors
+. "${HOME}/.cache/wal/colors.sh"
+
+a='%{F#FFF}'
+n='%{F#EEEEEE}'
 
 battery() {
     cur=$(cat /sys/class/power_supply/BAT0/capacity)
@@ -24,11 +27,11 @@ battery() {
 workspaces() {
     cur=$(bspc wm -g | grep -o '[OFU][1-5]' | tail -c2)
     case "$cur" in
-        1) echo " ${a}${n}";;
-        2) echo " ${a}${n}";;
-        3) echo " ${a}${n}";;
-        4) echo " ${a}${n}";;
-        5) echo " ${a}${n}";;
+        1) echo "  I  ";;
+        2) echo "  II  ";;
+        3) echo "  III  ";;
+        4) echo "  VI  ";;
+        5) echo "  V  ";;
 
     esac
 }
@@ -56,12 +59,12 @@ clock() {
         date +'%H:%M' # we don't need an useless echo to output a variable here
 }
 
-while echo "%{l}$(workspaces)%{r}%{F#FFFFFF}%{B#F08398}$(currentsong)%{F#FFFFFF}%{B#F68EB6}$(volume)%{F#FFFFFF}%{B#d16ead}$(battery)%{F-}%{B-}%{c}%{F#FFFFFF}%{B#DEA9DD} $(clock) %{F-}%{B-}"; do # i'd recomment puting your output here to allow your bar to die properly
+while echo "%{l}%{F#EEEEEE}%{B#525252}$(workspaces)%{r}%{F#EEEEEE}%{B#525252}$(volume)%{F-}%{B-}%{c}%{F#EEEEEE}%{B#525252} $(clock) %{F-}%{B-}"; do # i'd recomment puting your output here to allow your bar to die properly
     sleep .2s # i'd also recommend puting a smaller sleep time to make the bar more responsive (which is nice for workspaces for example)
 done |\
     lemonbar \
-    -B '#373b41' \
-    -F '#FFFFFF' \
-    -f 'ProFont'-11 \
-    -f 'WunconSiji'
-
+    -g  1920x22 \
+    -B  '#1b1b1b' \
+    -F  $color8 \
+    -f 'cherry'-9 \
+    -f '-Wuncon-Siji-Medium-R-Normal--10-100-75-75-C-80-ISO10646-1'

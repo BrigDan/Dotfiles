@@ -2,10 +2,15 @@ Xft.dpi: 96
 
 URxvt.letterSpace: -1
 URxvt.scrollBar: none
-URxvt.internalBorder: 6
+URxvt.internalBorder: 50
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
 
-URxvt.font: xft:Hack:style=Regular:size=10.5
-URxvt.boldFont: xft:Hack:style=Bold:size=10.5
+
+URxvt.font: xft:cherry:style=Regular:size=10.5
+URxvt.boldFont: xft:cherry:style=Bold:size=10.5
 
 URxvt.foreground: #ffffff
 

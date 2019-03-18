@@ -1,63 +1,28 @@
 #
-# Chromebook Hotkeys
+# Volume
 #
+
+XF86AudioMute
+	amixer set Master 0%+ toggle
+XF86AudioLowerVolume
+	amixer set Master 10%-
+XF86AudioRaiseVolume
+	amixer set Master 10%+
+
 #
-#-----------------
-#Special Keybinds
-#-----------------
-#Left
-super + F1
-	xvkbd -xsendevent -text "\A\[Left]"
-#Right
-super + F2
-	xvkbd -xsendevent -text "\A\[Right]"
-#Delete 
-alt + BackSpace
-	xvkbd -xsendevent -text '\[Delete]'
-#-----------------
-#Screenshot
-#-----------------
+# Screenshot
+#
 
-super + F4
-	maim -u ~/Pictures/Screenshot.png
+Print
+	maim screenshot.png
 
-super + F5
-	maim -s -u ~/Pictures/Screenshot.png
-
-#-----------------
-#Brightness
-#-----------------
-
-#Brightness Down
-super + F6
-        xbacklight -dec 10
-#Brightness Up
-super + F7
-        xbacklight -inc 10
-#-----------------
-#Volume
-#-----------------
-
-#Volume Mute
-super + F8
-	amixer -q -D pulse sset Master 0%+ toggle
-#Volume Down
-super + F9
-	amixer -q -D pulse sset Master 10%-
-Volume Up
-super + F10
-	amixer -q -D pulse sset Master 10%+
-
+shift + Print
+	maim -s | xclip -selection clipboard -t image/png
 
 
 #
 # wm independent hotkeys
 #
-
-#lock
-ctrl + alt + l
-	i3lock -i /home/brig/Pictures/lock.png
-
 
 # terminal emulator
 super + Return
@@ -65,8 +30,7 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run -fn 'ProFont'-11 -nb '#373b41' -nf '#FFFFFF' -sb '#d16ead' -sf '#EEEEEE'
-
+	dmen
 
 # make sxhkd reload its configuration files:
 super + Escape
