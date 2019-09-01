@@ -1,0 +1,16 @@
+#!/bin/bash
+
+TOGGLE=/tmp/toggleNotifications
+
+if [[ ! -e $TOGGLE ]]; then
+    touch $TOGGLE;
+    echo "Notifications Enabled";
+    notify-send 'Notifications ON';
+    notify-send "DUNST_COMMAND_RESUME";
+else
+    rm $TOGGLE
+    echo "Notifications Disabled";
+    notify-send 'Notifications OFF';
+    sleep 1;
+    notify-send 'DUNST_COMMAND_PAUSE';
+fi

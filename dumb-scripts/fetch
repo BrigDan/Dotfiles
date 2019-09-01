@@ -1,0 +1,15 @@
+#!/bin/bash
+
+dist=$(lsb_release -d | cut -c 14-23)
+pac=$(xbps-query -l | wc -l)
+wm=$(tail -1 ~/.xinitrc)
+
+col="$(tput setaf 3)"
+reset="$(tput sgr0)"
+
+echo "${col}  d88b.d88b   系统信息
+ 88888888888  -------- ${reset}
+${col}  Y8888888Y  ${reset} Distro: $dist
+${col}    Y888Y  ${reset}   Packages: $pac
+${col}      Y   ${reset}    wm: bspwm
+"

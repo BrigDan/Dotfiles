@@ -1,0 +1,4 @@
+#! /bin/bash
+if [[ $(tty) == /dev/tty[0-9] ]];
+ then setfont "ter-132n";
+fi
